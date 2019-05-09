@@ -1,0 +1,28 @@
+<h4>DateUtilsService</h4>
+<p>Este servicio está pensado para proveer lógica útil y común con respecto al manejo de fechas.</p>
+<shw-design-warning>
+  <strong>Nota: </strong>Actualmente el servicio no provee mucha funcionalidad, si crees que nuevos métodos
+  deben ser añadidos al servicio, recuerda <a shwContactLink>contactarnos</a>
+</shw-design-warning>
+<p>El servicio <code>DateUtilsService</code> ofrece el siguiente contrato:</p>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <th>Método</th>
+      <th>Descripción</th>
+      <th>Ejemplo</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td><shw-code-block code="getFirstMomentOfDate(date: Date): Date"></shw-code-block></td>
+        <td>Retorna una fecha que corresponde al primer momento posible de la fecha dada por parámetro.</td>
+        <td>{{ now | date:'d/M/yy HH:mm:ss'}} se transforma a {{ firstMomentOfToday | date:'d/M/yy HH:mm:ss' }}</td>
+      </tr>
+      <tr>
+        <td><shw-code-block code="getLastMomentOfDate(date: Date): Date"></shw-code-block></td>
+        <td>Retorna una fecha que corresponde al último momento posible de la fecha dada por parámetro.</td>
+        <td>{{ now | date:'d/M/yy HH:mm:ss'}} se transforma a {{ lastMomentOfToday | date:'d/M/yy HH:mm:ss' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

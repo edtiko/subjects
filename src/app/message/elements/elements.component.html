@@ -1,0 +1,70 @@
+<h3>Elementos del módulo</h3>
+<hr>
+<p>Para ofrecer la funcionalidad de mensajes de alerta, proveemos al programador de:</p>
+<ul>
+  <li>Un enumerador de tipos de mensajes.</li>
+  <li>Un modelo de mensaje.</li>
+  <li>Un servicio de mensajes.</li>
+  <li>Un componente para mostrar los mensajes.</li>
+</ul>
+<h4>Enumerador</h4>
+<p>
+  El enumerador <code>MessageType</code> ofrece 4 tipos de mensajes que son encontrados frecuentemente
+  en las aplicaciones del equipo de ERPSAAS:
+</p>
+<ul>
+  <li><code>Success</code></li>
+  <li><code>Error</code></li>
+  <li><code>Info</code></li>
+  <li><code>Warning</code></li>
+</ul>
+<p>Este enumerador es usado en el modelo de mensaje que permite el uso de la funcionalidad.</p>
+<h4>Modelo</h4>
+<p>
+  Para modelar los mensajes que pueden ser mostrados en la aplicación, definimos un simple modelo llamado <code>Message</code>,
+  cuyas propiedades son:
+</p>
+<ul>
+  <li><code>text: string</code></li>
+  <li><code>type: MessageType</code></li>
+</ul>
+<h4>Servicio</h4>
+<p>La librería provee además un servicio inyectable llamado <code>MessageService</code>, que provee el siguiente contrato:</p>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <th>Método</th>
+      <th>Descripción</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td><shw-code-block code="addMessage(message: Message): void"></shw-code-block></td>
+        <td>Se encarga a añadir un mensaje a la lista de mensajes que están siendo mostrados en la aplicación.</td>
+      </tr>
+      <tr>
+        <td>
+          <shw-code-block code="removeMessage(index: number): void"></shw-code-block>
+        </td>
+        <td>
+          Se encarga de remover de la aplicación el mensaje que se encuentre en la posición dada por parámetro.
+          Este método es más que todo para uso del componente <code>LoggroMessageOutletComponent</code> y se recomienda no usarlo si es posible.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <shw-code-block [code]="'getMessages(): Observable<Message[]>'"></shw-code-block>
+        </td>
+        <td>
+          Se encarga de retornar el <code>Observable</code> de la lista de mensajes de la aplicación.
+          Este método es más que todo para uso del componente <code>LoggroMessageOutletComponent</code> y se recomienda no usarlo si es
+          posible.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h4>Componente</h4>
+<p>
+  El componente <code>LoggroMessageOutletComponent</code> es el que se utilizará para mostrar la lista de mensajes que están
+  registrados en la aplicación.
+</p>

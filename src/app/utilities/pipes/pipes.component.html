@@ -1,0 +1,46 @@
+<h3>Pipes</h3>
+<hr>
+<p>
+  Los pipes comunes de la librería ERPSAASCMP están expuestos en el módulo <code>PipesModule</code>,
+  por lo que para hacer uso de los pipes deberá primero importarse el módulo de la siguiente forma:
+  <shw-code-block code="import { PipesModule } from 'erpsaascmp';"></shw-code-block>
+</p>
+<h4>BooleanPipe</h4>
+<p>
+  Este pipe fue creado para transformar valores booleanos en valores de texto apropiados.
+  Los valores de texto por defecto son 'Si' para <code>true</code> y 'No' para <code>false</code>.
+  No obstante, estos valores pueden ser configurados para mostrar otro texto.
+</p>
+<p>
+  En la siguiente tabla, se demuestra el uso del pipe <code>BooleanPipe</code>. Debe notarse que los valores
+  configurados para verdadero y falso son opcionales, en caso de que cualquiera de los dos sea nulo o indefinido
+  se utilizará el valor por defecto.
+</p>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Valores por defecto</th>
+        <th>Valores configurados</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>true</code></td>
+        <td>{{ true | boolean }}</td>
+        <td>{{ true | boolean : 'Verdadero' : 'Falso' }}</td>
+      </tr>
+      <tr>
+        <td><code>false</code></td>
+        <td>{{ false | boolean }}</td>
+        <td>{{ false | boolean : 'Verdadero' : 'Falso' }}</td>
+      </tr>
+      <tr>
+        <td><strong>Código</strong></td>
+        <td><code ngNonBindable>{{ valorBooleano | boolean }}</code></td>
+        <td><code ngNonBindable>{{ valorBooleano | boolean : 'Verdadero' : 'Falso' }}</code></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
