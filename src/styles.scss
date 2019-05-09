@@ -1,11 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~highlight.js/styles/monokai-sublime.css";
-@import "~@angular/cdk/overlay-prebuilt.css";
-@import "~primeicons/primeicons.css";
-@import "~primeng/resources/themes/nova-light/theme.css";
-@import "~primeng/resources/primeng.min.css";
 @import "~bootstrap/scss/bootstrap.scss";
-@import "../dist/erpsaascmp/lib/styles/styles.scss";
+@import "../dist/cmp/lib/styles/styles.scss";
 
 $gray-text: #5f5f5f;
 

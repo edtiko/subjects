@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "erpsaascmp-showcase": {
+    "cmp-showcase": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/erpsaascmp-showcase",
+            "outputPath": "dist/cmp-showcase",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "erpsaascmp-showcase:build"
+            "browserTarget": "cmp-showcase:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "erpsaascmp-showcase:build:production"
+              "browserTarget": "cmp-showcase:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "erpsaascmp-showcase:build"
+            "browserTarget": "cmp-showcase:build"
           }
         },
         "test": {
@@ -107,7 +107,7 @@
         }
       }
     },
-    "erpsaascmp-showcase-e2e": {
+    "cmp-showcase-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -116,11 +116,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "erpsaascmp-showcase:serve"
+            "devServerTarget": "cmp-showcase:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "erpsaascmp-showcase:serve:production"
+              "devServerTarget": "cmp-showcase:serve:production"
             }
           }
         },
@@ -135,9 +135,9 @@
         }
       }
     },
-    "erpsaascmp": {
-      "root": "projects/erpsaascmp",
-      "sourceRoot": "projects/erpsaascmp/src",
+    "cmp": {
+      "root": "projects/cmp",
+      "sourceRoot": "projects/cmp/src",
       "projectType": "library",
       "prefix": "lib",
       "schematics": {
@@ -149,16 +149,16 @@
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/erpsaascmp/tsconfig.lib.json",
-            "project": "projects/erpsaascmp/ng-package.json"
+            "tsConfig": "projects/cmp/tsconfig.lib.json",
+            "project": "projects/cmp/ng-package.json"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/erpsaascmp/src/test.ts",
-            "tsConfig": "projects/erpsaascmp/tsconfig.spec.json",
-            "karmaConfig": "projects/erpsaascmp/karma.conf.js",
+            "main": "projects/cmp/src/test.ts",
+            "tsConfig": "projects/cmp/tsconfig.spec.json",
+            "karmaConfig": "projects/cmp/karma.conf.js",
             "codeCoverage": true
           }
         },
@@ -166,8 +166,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/erpsaascmp/tsconfig.lib.json",
-              "projects/erpsaascmp/tsconfig.spec.json"
+              "projects/cmp/tsconfig.lib.json",
+              "projects/cmp/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -177,5 +177,5 @@
       }
     }
   },
-  "defaultProject": "erpsaascmp-showcase"
+  "defaultProject": "cmp-showcase"
 }

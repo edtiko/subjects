@@ -2,16 +2,16 @@
 <hr>
 <p>
   Para hacer uso de la funcionalidad de mensajes de alerta deberemos asegurarnos de incorporar en
-  el lugar en el cual deseamos mostrar los mensajes el componente <code>LoggroMessageOutletComponent</code>
+  el lugar en el cual deseamos mostrar los mensajes el componente <code>MessageOutletComponent</code>
   y debemos hacer uso del servicio <code>MessageService</code> para añadir mensajes a mostrar fácilmente.
 </p>
 <p>
-  Pueden incluirse múltiples veces el componente <code>LoggroMessageOutletComponent</code> en distintas pantallas
+  Pueden incluirse múltiples veces el componente <code>MessageOutletComponent</code> en distintas pantallas
   de la aplicación, pero todos mostrarían los mismos mensajes, puesto que están haciendo uso del mismo servicio.
   Es por esta razón que se recomienda hacer uso del componente outlet una sola vez.
 </p>
 <shw-component-container>
-  <loggro-message-outlet></loggro-message-outlet>
+  <message-outlet></message-outlet>
   <div class="input-group">
     <input type="text" [(ngModel)]="message" class="form-control" placeholder="Escribe un mensaje a añadir..." required>
     <div class="input-group-append">
@@ -23,7 +23,7 @@
   </div>
 </shw-component-container>
 <h5>Import:</h5>
-<shw-code-block code="import { MessageModule } from 'erpsaascmp';"></shw-code-block>
+<shw-code-block code="import { MessageModule } from 'cmp';"></shw-code-block>
 <h5>En el componente:</h5>
 <shw-code-block [code]="componentCodeExample"></shw-code-block>
 <h5>En el template del componente:</h5>

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
-import { MessageService, Message } from 'erpsaascmp';
-import { MessageType } from 'erpsaascmp';
+import { MessageService, Message } from 'cmp';
+import { MessageType } from 'cmp';
 
 @Component({
   selector: 'shw-usage-example',
@@ -12,8 +12,8 @@ export class UsageExampleComponent {
   componentCodeExample =
 `import { Component } from '@angular/core';
 
-import { MessageService, Message } from 'erpsaascmp';
-import { MessageType } from 'erpsaascmp';
+import { MessageService, Message } from 'cmp';
+import { MessageType } from 'cmp';
 
 @Component({...})
 export class UsageExampleComponent {
@@ -34,7 +34,7 @@ export class UsageExampleComponent {
 }`;
 
   templateCodeExample =
-`<loggro-message-outlet></loggro-message-outlet>
+`<message-outlet></message-outlet>
 <div class="input-group">
   <input type="text" [(ngModel)]="message" class="form-control" placeholder="Escribe un mensaje a añadir..." required>
   <div class="input-group-append">

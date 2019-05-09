@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { DateUtilsService } from 'erpsaascmp';
+import { DateUtilsService } from 'cmp';
 
 @Component({
   selector: 'shw-date-utils',

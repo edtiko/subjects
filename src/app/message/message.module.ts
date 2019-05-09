@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { MessageModule as LibraryMessageModule } from 'erpsaascmp';
+import { MessageModule as LibraryMessageModule } from 'cmp';
 
 import { SharedModule } from '../shared/shared.module';
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 
-import { dateRangeValidator } from 'erpsaascmp';
+import { dateRangeValidator } from 'cmp';
 
 @Component({
   selector: 'shw-validators',

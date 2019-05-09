@@ -19,11 +19,11 @@
       "dom"
     ],
     "paths": {
-      "erpsaascmp": [
-        "dist/erpsaascmp"
+      "cmp": [
+        "dist/cmp"
       ],
-      "erpsaascmp/*": [
-        "dist/erpsaascmp/*"
+      "cmp/*": [
+        "dist/cmp/*"
       ]
     }
   }

@@ -1,0 +1,64 @@
+<div>
+  <h2>¿Cómo empezar?</h2>
+  <hr />
+  <div class="w-75">
+    <p>Para instalar los componentes de ERPSAASCMP en tu proyecto deberás seguir los siguientes pasos:</p>
+    <p>
+      <strong>0. Instala el ambiente de desarrollo en Angular:</strong>
+      <br />
+      Si aún no tienes configurado tu ambiente de desarrollo en Angular, hemos preparado una
+      <a href="https://mercurio.psl.com.co:9443/confluence/pages/viewpage.action?pageId=113152967">guía de instalación</a>
+      para que tengas el ambiente de desarrollo recomendado por el equipo de ERPSAAS.
+    </p>
+    <p>
+      <strong>1. Instala las dependencias de la librería ERPSAASCMP:</strong>
+      <br />
+      Abre una terminal de comandos y asegúrate que esta esté ubicada en el directorio del proyecto al cual deseas
+      instalar la librería.
+      Ejecuta los siguientes comandos en la terminal de comandos:
+    </p>
+    <div>
+      <shw-console-command-block [command]="externalDependenciesInstallationCommands">
+      </shw-console-command-block>
+    </div>
+    <p>
+      <strong>2. Incluye la dependencia a las hojas de estilo necesarias.</strong>
+      <br/>
+      En el archivo <code>angular.json</code> de tu proyecto asegurate de añadir lo siguiente:
+    </p>
+    <shw-code-block [code]="stylesInAngularJson"></shw-code-block>
+    <p>
+      <strong>3. Instala nuestra librería de componentes:</strong>
+      <br/>
+      ?????????????????
+    </p>
+    <shw-design-warning>
+      <strong>Nota:</strong> Aún nos encontramos buscando una mejor forma de manejar las
+      dependencias internas de la librería. Hemos tratado de minimizar el uso de librerías externas,
+      las librerías usadas actualmente son las siguientes:
+      <ul class="m-0">
+        <li>
+          <strong>primeng y primeicons: </strong>
+          PrimeNG es una librería de componentes usada actualmente para los componentes de tabla, dropdown y calendar.
+          Para poder mostrar los íconos necesitados además por estos componentes debe instalarse también Primeicons.
+        </li>
+        <li>
+          <strong>fontawesome: </strong>
+          Esta es una librería que nos ofrece una amplia colección de íconos. Actualmente se está usando la versión
+          gratuita de la librería.
+        </li>
+        <li>
+          <strong>bootstrap: </strong>
+          Nos ofrece un gran conjunto de utilidades y estilos CSS. <strong>Ojo: </strong> Estamos haciendo uso
+          únicamente de las hojas de estilo
+          de Bootstrap, no debe incluirse en el proyecto JQuery para hacer uso de las funcionalidades extras de
+          Bootstrap.
+        </li>
+        <li>
+          <strong>file-saver y xlsx: </strong>
+          Estas librerías son utilizadas por el ExcelExporterService para descargar archivos de Excel.
+        </li>
+      </ul>
+    </shw-design-warning>
+  </div>
+</div>
